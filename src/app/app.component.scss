@@ -1,0 +1,165 @@
+.html{
+    font-size: 63.5%;
+}
+
+// "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+// "node_modules/bootstrap/dist/js/bootstrap.min.js"
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+#sup1{
+    margin-left: 15px;
+}
+
+#sup1{
+    margin-right: 15px;
+}
+
+.row {
+    margin: 20px 0 0 0;
+}
+
+.row-1 input{
+    width: 250px;
+}
+
+.row-2 input{
+    width: 210px;
+}
+
+.row-3 input{
+    width: 180px;
+}
+
+.row-7{
+    display: flex;
+    justify-content: center;
+}
+
+div label {
+    text-align: center;
+    display: inline;
+    padding: 0 5px 5px 0;
+}
+
+input[type=submit] {
+    font-weight: bold;
+    background-color: #9b9b9b;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+}
+
+select {
+    width: 15%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    right: 1rem;
+}
+
+.pseudo-img {
+    width: 10vw;
+}
+
+@media screen and (max-width: 900px) {
+    label{
+        width: 65px;
+    }
+    .images{
+        align-items: center;
+    }
+    
+    input[type=text], input[type=email]  {
+        width: 20%;
+    }
+    .images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    input[type=submit], input[type=text], input[type=email]  {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .row{
+        margin: 0;
+    }
+
+    .images{
+        text-align: center;
+    }
+    .container{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .row-1, .row-2, .row-3, .row-7{
+        display: flex;
+        justify-content: center;
+    }
+    input[type=text]{
+        margin: 0 35px 0 0;
+    }
+
+    .row-4, .row-5, .row-6{
+        display: flex;
+        justify-content: left;
+        margin-left: 115px;
+    } 
+    
+    .row-3  #correo{
+        width: 300px;
+    }
+}
+
+.cb{
+   /* display: flex;
+   justify-content: center;
+   position: relative; */
+    /* left: 16rem; */
+}
+
+.qr{
+    /* right: 0;
+    flex-shrink: end; */
+    /* align-items: initial; */
+    /* display: flex; */
+    /* justify-content: end; */
+    /* top: 2rem; */
+    /* position: relative; */
+    /* left: 16rem; */
+}
+
+/* td{
+    width: 33.33%;
+} */
+
+#resultado {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+#resultado.ok {
+    background-color: green;
+}
