@@ -10,7 +10,7 @@ export class MateriasService extends ApiService{
 
   constructor(private http: HttpClient) { super()}
 
-  allRecords(vin : string) : Observable<any>{
+  allRecords() : Observable<any>{
     return this.http.get(this.API_URI + "lista_planes_materias.php")
   }
 
