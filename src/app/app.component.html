@@ -1,117 +1,221 @@
-<div class="container">
-  <h2>Untitled Page</h2>
-  <fieldset>
-    <div>
-      <img id="sup1" align="left" src="../assets/img/se.jpg" alt="logoSecretaria">
-      <img id="sup2" align="right" src="../assets/img/numero.jpg" alt="imagen turno">
+<body>
+    <div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2>Manage <b>Employees</b></h2>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
+                            <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="selectAll">
+                                    <label for="selectAll"></label>
+                                </span>
+                            </th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                    <label for="checkbox1"></label>
+                                </span>
+                            </td>
+                            <td>Thomas Hardy</td>
+                            <td>thomashardy@mail.com</td>
+                            <td>89 Chiaroscuro Rd, Portland, USA</td>
+                            <td>(171) 555-2222</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                                    <label for="checkbox2"></label>
+                                </span>
+                            </td>
+                            <td>Dominique Perrier</td>
+                            <td>dominiqueperrier@mail.com</td>
+                            <td>Obere Str. 57, Berlin, Germany</td>
+                            <td>(313) 555-5735</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                                    <label for="checkbox3"></label>
+                                </span>
+                            </td>
+                            <td>Maria Anders</td>
+                            <td>mariaanders@mail.com</td>
+                            <td>25, rue Lauriston, Paris, France</td>
+                            <td>(503) 555-9931</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox4" name="options[]" value="1">
+                                    <label for="checkbox4"></label>
+                                </span>
+                            </td>
+                            <td>Fran Wilson</td>
+                            <td>franwilson@mail.com</td>
+                            <td>C/ Araquil, 67, Madrid, Spain</td>
+                            <td>(204) 619-5731</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                        </tr>					
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                    <label for="checkbox5"></label>
+                                </span>
+                            </td>
+                            <td>Martin Blank</td>
+                            <td>martinblank@mail.com</td>
+                            <td>Via Monte Bianco 34, Turin, Italy</td>
+                            <td>(480) 631-2097</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+                <div class="clearfix">
+                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a href="#">Previous</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
     </div>
-    <div>
-      <h1 align="center"> Ticket de Turno </h1>
+    <!-- Edit Modal HTML -->
+    <div id="addEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Add Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">					
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" required>
+                        </div>					
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Add">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <div class="row row-1">
-        <label for="nombreCompleto">Nombre completo de quien realizará el trámite:</label>
-        <input formControlName="nombreCompleto" class="form-control" name="nombreCompleto" type="text"
-          id="f_nombreCompleto" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['nombreCompleto'].errors }">
-        <div *ngIf="submitted && registerForm.controls['nombreCompleto'].errors" class="text-danger">
-          <div *ngIf="registerForm.controls['nombreCompleto'].errors['required']">Nombre completo por favor</div>
+    <!-- Edit Modal HTML -->
+    <div id="editEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Edit Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">					
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" required>
+                        </div>					
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-info" value="Save">
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <label for="curp">CURP:</label>
-        <input formControlName="curp" class="form-control" name="curp" type="text" id="f_curp" minlength="18"
-          maxlength="18" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['curp'].errors }">
-        <div *ngIf="submitted && registerForm.controls['curp'].errors" class="text-danger">
-          <div *ngIf="registerForm.controls['curp'].errors['required']">Curp es requerido</div>
-        </div>
-        <pre id="resultado"></pre>
-        <!-- <pre id="resultado"></pre> -->
-      </div>
-      <div class="row row-2">
-        <label for="nombre">Nombre:</label>
-        <input formControlName="nombre" class="form-control" name="nombre" type="text" id="f_nombre" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['nombre'].errors }">
-        <div *ngIf="submitted && registerForm.controls['nombre'].errors" class="text-danger">
-          <div *ngIf="registerForm.controls['nombre'].errors['required']">Nombre es requerido</div>
-        </div>
-        <label for="paterno">Paterno:</label>
-        <input formControlName="paterno" class="form-control" name="paterno" type="text" id="f_paterno" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['paterno'].errors }">
-        <div *ngIf="submitted && registerForm.controls['paterno'].errors" class="text-danger">
-          <div *ngIf="registerForm.controls['paterno'].errors['required']">A. paterno es requerido</div>
-        </div>
-        <label for="materno">Materno:</label>
-        <input formControlName="materno" class="form-control" name="materno" type="text" id="f_materno" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['materno'].errors }">
-        <div *ngIf="submitted && registerForm.controls['materno'].errors" class="text-danger">
-          <div *ngIf="registerForm.controls['materno'].errors['required']">A. materno es requerido</div>
-        </div>
-      </div>
-      <div class="row row-3">
-        <label for="telefono">Telefono:</label>
-        <input formControlName="telefono" class="form-control" name="telefono" type="text" minlength="10" maxlength="10"
-          id="f_telefono" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['telefono'].errors }">
-        <div *ngIf="submitted && registerForm.controls['telefono'].errors" class="text-danger">
-          <div *ngIf="registerForm.controls['telefono'].errors['required']">Telefono es requerido</div>
-        </div>
-        <label for="celular">Celular:</label>
-        <input formControlName="celular" class="form-control" name="celular" type="text" minlength="10" maxlength="10"
-          id="f_celular" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['celular'].errors }">
-        <div *ngIf="submitted && registerForm.controls['celular'].errors" class="text-danger">
-          <div *ngIf="registerForm.controls['celular'].errors['required']">Celular es requerido</div>
-        </div>
-        <label for="correo">Correo:</label>
-        <input formControlName="correo" class="form-control" name="correo" type="email" id="f_correo" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['correo'].errors }">
-        <div *ngIf="submitted && registerForm.controls['correo'].errors" class="text-danger">
-          <div *ngIf="registerForm.controls['correo'].errors['required']">Correo es requerido</div>
-          <div *ngIf="registerForm.controls['correo'].errors['email']">Correo no valido</div>
-        </div>
-      </div>
-      <div class="row row-4">
-        <label for="interes">¿Nivel al que desea ingresar o que ya cursa el alumno? </label>
-        <select formControlName="interes" class="form-control" name="interes" id="f_interes">
-          <option value="" selected disabled hidden>Interes</option>
-          <option value="Preescolar">Preescolar</option>
-          <option value="Escolar">Escolar</option>
-          <option value="Secundaria">Secundaria</option>
-        </select>
-      </div>
-      <div class="row row-5">
-        <label for="interes2">Municipio donde desea estudie el alumno: </label>
-        <select formControlName="interes2" class="form-control" name="interes2" id="f_interes2">
-          <option value="" selected disabled hidden>Municipio</option>
-          <option>Saltillo</option>
-          <option>Arteaga</option>
-        </select>
-      </div>
-      <div class="row row-6">
-        <label for="interes3">Seleccione el asunto que va a tratar: </label>
-        <select formControlName="interes3" class="form-control" name="interes3" id="f_interes3">
-          <option value="" selected disabled hidden>Interes</option>
-          <option>Incripción</option>
-          <option>Reinscripción</option>
-        </select>
-      </div>
-      <div class="row submitDiv row-7 form-group">
-        <input type="submit" value="Generar Turno">
-      </div>
-    </form>
-    <div class="images">
-      <div class="pseudo-img"></div>
-      <img src="../assets/img/codigoBarras.jpg" alt="">
-      <img src="../assets/img/qr.jpg" alt="">
     </div>
-  </fieldset>
-</div>
-
-<!-- 
-───────────────────────────────────────────────────────────────────────────────────────────────────────
-─██████████████─██████████████─████████████████───████████████████───██████████████─████████████████───
-─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░░░██───██░░░░░░░░░░░░██───██░░░░░░░░░░██─██░░░░░░░░░░░░██───
-─██░░██████████─██░░██████████─██░░████████░░██───██░░████████░░██───██░░██████████─██░░████████░░██───
-─██░░██─────────██░░██─────────██░░██────██░░██───██░░██────██░░██───██░░██─────────██░░██────██░░██───
-─██░░██████████─██░░██████████─██░░████████░░██───██░░████████░░██───██░░██████████─██░░████████░░██───
-─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░░░██───██░░░░░░░░░░░░██───██░░░░░░░░░░██─██░░░░░░░░░░░░██───
-─██░░██████████─██░░██████████─██░░██████░░████───██░░██████░░████───██░░██████████─██░░██████░░████───
-─██░░██─────────██░░██─────────██░░██──██░░██─────██░░██──██░░██─────██░░██─────────██░░██──██░░██─────
-─██░░██─────────██░░██████████─██░░██──██░░██████─██░░██──██░░██████─██░░██████████─██░░██──██░░██████─
-─██░░██─────────██░░░░░░░░░░██─██░░██──██░░░░░░██─██░░██──██░░░░░░██─██░░░░░░░░░░██─██░░██──██░░░░░░██─
-─██████─────────██████████████─██████──██████████─██████──██████████─██████████████─██████──██████████─
-─────────────────────────────────────────────────────────────────────────────────────────────────────── 
--->
+    <!-- Delete Modal HTML -->
+    <div id="deleteEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Delete Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">					
+                        <p>Are you sure you want to delete these Records?</p>
+                        <p class="text-warning"><small>This action cannot be undone.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-danger" value="Delete">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>

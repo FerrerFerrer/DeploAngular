@@ -1,47 +1,32 @@
 import { Component } from '@angular/core';
-
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-
+import { MateriasService } from './services/materias.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tarea-angular';
+  res: any;
 
-  registerForm !: FormGroup
-  submitted = false;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(public _materiaService: MateriasService){
+
   }
-  ngOnInit() {
-    this.registerForm = this.formBuilder.group({
-      nombreCompleto: ['', Validators.required],
-      curp: ['', Validators.required],
-      nombre: ['', Validators.required],
-      paterno: ['', Validators.required],
-      materno: ['', Validators.required],
-      telefono: ['', Validators.required],
-      celular: ['', Validators.required],
-      correo: ['', Validators.required, Validators.email],
-      interes: ['', Validators.required],
-      interes2: ['', Validators.required],
-      interes3: ['', Validators.required],
-      // nombre: ['', [Validators.required, Validators.email]],
-      // paterno: ['', [Validators.required, Validators.minLength(5)]]
-    });
+
+  async create() {
+
   }
-  onSubmit() {
-    this.submitted = true;
-    //detiene el proceso si la forma es invalida
-    if (this.registerForm.invalid) {
-      return;
-    } else {
-      alert("SUCCESS")
-    }
+  async read() {
+
   }
-  validar_aspirante(){
-    
+  async readOne() {
+
   }
+  async update() {
+
+  }
+  async delete() {
+
+  }
+
 }
+
